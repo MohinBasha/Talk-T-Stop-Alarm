@@ -1,0 +1,150 @@
+.dismiss-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  animation: float-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Confetti */
+.confetti-piece {
+  position: fixed;
+  top: -20px;
+  pointer-events: none;
+  z-index: 100;
+  animation: confetti-fall linear forwards;
+}
+
+/* Card */
+.dismiss-card {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  border-color: rgba(0,229,160,0.2);
+  box-shadow: var(--shadow-card), 0 0 80px rgba(0,229,160,0.1);
+}
+
+/* Success icon */
+.success-icon {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid var(--accent-green);
+}
+
+.success-ring-outer {
+  width: 120px;
+  height: 120px;
+  border-color: rgba(0,229,160,0.3);
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+.success-ring-inner {
+  width: 96px;
+  height: 96px;
+  border-color: rgba(0,229,160,0.6);
+  background: rgba(0,229,160,0.08);
+}
+
+.success-checkmark {
+  font-size: 48px;
+  color: var(--accent-green);
+  position: relative;
+  z-index: 2;
+  animation: success-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  text-shadow: 0 0 30px var(--accent-green-glow);
+  line-height: 1;
+}
+
+/* Title */
+.dismiss-title {
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff, var(--accent-green), #4a9eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slide-up 0.5s ease 0.2s both;
+}
+
+.dismiss-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent-green);
+  opacity: 0.8;
+  animation: slide-up 0.5s ease 0.3s both;
+}
+
+/* Stats */
+.dismiss-stat-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  animation: slide-up 0.5s ease 0.4s both;
+}
+
+.dismiss-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.dismiss-stat-val {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-green);
+}
+
+.dismiss-stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.dismiss-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+}
+
+/* Message */
+.dismiss-message {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 340px;
+  animation: slide-up 0.5s ease 0.5s both;
+}
+
+.set-new-btn {
+  font-size: 16px;
+  padding: 16px 40px;
+  animation: slide-up 0.5s ease 0.6s both;
+}
